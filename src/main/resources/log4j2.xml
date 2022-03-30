@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
+<Configuration status="WARN">
     <Appenders>
         # Rolling appender
         <RollingFile name="rollingFile"
@@ -25,10 +25,10 @@
 
     <Loggers>
         # Override log level for specified package
-        <Logger name="de.swingbe" level="all">
-            <appender-ref ref="rollingFile" level="all"/>
+        <Logger name="de.swingbe" level="warn">
+            <appender-ref ref="rollingFile" level="warn"/>
         </Logger>
-        <Root level="all" additivity="false">
+        <Root level="warn" additivity="false">
             <appender-ref ref="console"/>
         </Root>
     </Loggers>
